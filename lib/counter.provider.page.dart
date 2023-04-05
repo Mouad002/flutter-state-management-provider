@@ -25,19 +25,19 @@ class CounterProviderPage extends StatelessWidget {
         );
       }),
       floatingActionButton:
-          Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-        FloatingActionButton(
-            child: const Icon(Icons.remove),
-            onPressed: () {
-              counterState.decrement();
-            }),
-        const SizedBox(
-          width: 10,
-        ),
+          Column(mainAxisAlignment: MainAxisAlignment.end, children: [
         FloatingActionButton(
             child: const Icon(Icons.add),
             onPressed: () {
               counterState.increment();
+            }),
+        const SizedBox(
+          height: 10,
+        ),
+        FloatingActionButton(
+            child: const Icon(Icons.remove),
+            onPressed: () {
+              counterState.decrement();
             }),
       ]),
     );
